@@ -2,10 +2,18 @@ import Body from './Body'
 
 function App() {
   return(
-    <>
+    <div className='container'>
     <Body />
-    <p>hello</p>
-  </>
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+    <Body />
+  </div>
   )
   
 }

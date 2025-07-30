@@ -2,8 +2,8 @@
 
 function Body () {
   return(
-    <div>
-      Hello world
+    <div className="GameBoard">
+    hello
     </div>
   )
 }

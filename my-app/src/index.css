@@ -1,0 +1,29 @@
+body{
+  background-color: #1d2c36;
+  color: #b9c6c8;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+
+}
+
+.GameBoard{
+  width: 100px;
+  height: 100px;
+  background-color: #8f8578;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
