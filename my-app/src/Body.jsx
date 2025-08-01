@@ -16,6 +16,7 @@ const regenerate = () => {
 
 
   return(
+    <div className="mainWrapper">
     <div className="container">
       <div className="gameBoardWrapper"> 
     {num.map((n, i) => (
@@ -24,8 +25,13 @@ const regenerate = () => {
       </div>
     ))}
       </div>
-      <button onClick={regenerate}>Regenerate</button>
+      
     </div>
+
+    <button className="Regenerate" onClick={regenerate}>Regenerate</button>
+    </div>
+    
+    
     
     
   )

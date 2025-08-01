@@ -9,6 +9,8 @@ body{
   margin: 0;
 }
 
+
+
 .container{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -30,12 +32,43 @@ margin-left: 200px;
   cursor: pointer;
 }
 
-.GameBoard:hover{
+.gameBoard:hover{
   width: 120px;
   height: 120px;
 }
 
-.GameBoard:active{
+.gameBoard:active{
   width: 80px;
   height: 80px;
+}
+
+
+.gameBoardWrapper{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.gameBoard{
+  width: 100px;
+  height: 100px;
+  background-color: #8f8578;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.Regenerate{
+  color: #8f8578;
+  margin-top: 80px;
+  padding: 20px;
+  margin-left: 395px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
 }
