@@ -71,4 +71,11 @@ margin-left: 200px;
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
+  border: none;
+  transition: 0.5s;
+}
+
+.Regenerate:active{
+  background-color: #8f8578;
+  color: white;
 }
