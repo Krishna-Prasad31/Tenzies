@@ -8,6 +8,7 @@ function Body () {
 
 const[num, setNum] = React.useState(generateRandomNumbers)
 const [active, setActive] = React.useState(Array(10).fill(false));
+const [isWinner, setIsWinner] = React.useState(false)
 
 function handleClick(index) {
   setActive((prev) => {
@@ -18,9 +19,28 @@ function handleClick(index) {
 }
 
 const regenerate = () => {
-  setNum(generateRandomNumbers())
+  if(isWinner){
+    setNum(generateRandomNumbers())
   setActive(Array(10).fill(false))
+  setIsWinner(false)
+  }
+  else {
+    
+    setNum((prev) => 
+    prev.map((n, i) => (active[i] ? n : Math.floor(Math.random() * 6 + 1))))
+  }
+  
 }
+
+React.useEffect(() => {
+  const allHeld = active.every((t) => t)
+  const firstValue = num[0];
+  const allSame = num.every((n) => n === firstValue)
+
+  if(allHeld && allSame){
+    setIsWinner(true);
+  }
+},[num, active])
 
 
 
@@ -38,8 +58,11 @@ const regenerate = () => {
       
     </div>
 
-    <button className="Regenerate" onClick={regenerate}>Regenerate</button>
+    <button className="Regenerate" onClick={regenerate}>{isWinner ? "New Game" : "Regenerate"}</button>
+
+    <h2 className="cheer">{isWinner ? "You Win 🥳" : ""}</h2>
     </div>
+
     
     
     
