@@ -47,6 +47,7 @@ React.useEffect(() => {
 
   return(
     <div className="mainWrapper">
+      <h1 className="title">TENZIES</h1>
     <div className="container">
       <div className="gameBoardWrapper"> 
     {num.map((n, i) => (
