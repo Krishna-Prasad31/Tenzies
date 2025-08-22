@@ -79,3 +79,18 @@ margin-left: 200px;
   background-color: #8f8578;
   color: white;
 }
+
+.isToggled{
+   width: 100px;
+  height: 100px;
+  background-color: white;
+  color: #8f8578;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.5s;
+  cursor: pointer;
+}

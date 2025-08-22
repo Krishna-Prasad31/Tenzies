@@ -7,9 +7,19 @@ function Body () {
 }
 
 const[num, setNum] = React.useState(generateRandomNumbers)
+const [active, setActive] = React.useState(Array(10).fill(false));
+
+function handleClick(index) {
+  setActive((prev) => {
+    const newActive = [...prev];
+    newActive[index] = !newActive[index];
+    return newActive;
+  })
+}
 
 const regenerate = () => {
   setNum(generateRandomNumbers())
+  setActive(Array(10).fill(false))
 }
 
 
@@ -20,7 +30,7 @@ const regenerate = () => {
     <div className="container">
       <div className="gameBoardWrapper"> 
     {num.map((n, i) => (
-      <div className="gameBoard" key = {i} >
+      <div className={active[i] ? "isToggled" : "gameBoard"} onClick={() => handleClick(i)} key = {i} >
         {n}
       </div>
     ))}
